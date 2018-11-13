@@ -1,0 +1,27 @@
+c:\users\marco\documents\visual studio 2010\Projects\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.dll.config
+c:\users\marco\documents\visual studio 2010\Projects\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.dll
+c:\users\marco\documents\visual studio 2010\Projects\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.pdb
+c:\users\marco\documents\visual studio 2010\Projects\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\ResolveAssemblyReference.cache
+c:\users\marco\documents\visual studio 2010\Projects\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.dll
+c:\users\marco\documents\visual studio 2010\Projects\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.pdb
+C:\Progetti\SMSTrackingPack\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.dll.config
+C:\Progetti\SMSTrackingPack\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.dll
+C:\Progetti\SMSTrackingPack\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.pdb
+C:\Progetti\SMSTrackingPack\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\ResolveAssemblyReference.cache
+C:\Progetti\SMSTrackingPack\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.dll
+C:\Progetti\SMSTrackingPack\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.pdb
+C:\Users\Marco\Documents\Visual Studio 2010\Projects\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\PackTrackingDatabase.sdf
+C:\Progetti\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\PackTrackingDatabase.sdf
+C:\Progetti\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.dll.config
+C:\Progetti\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.dll
+C:\Progetti\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.pdb
+C:\Progetti\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.csprojResolveAssemblyReference.cache
+C:\Progetti\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.dll
+C:\Progetti\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.pdb
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\PackTrackingDatabase.sdf
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.dll.config
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.dll
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\bin\Debug\SMS.CaritasPackTracking.Model.pdb
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.csprojResolveAssemblyReference.cache
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.dll
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\obj\Debug\SMS.CaritasPackTracking.Model.pdb

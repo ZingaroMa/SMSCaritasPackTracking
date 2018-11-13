@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PackTrackingDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PackTrackingDatabaseModelStoreContainer">
+    <EntitySet Name="Assistito" EntityType="PackTrackingDatabaseModel.Store.Assistito" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ritiro" EntityType="PackTrackingDatabaseModel.Store.Ritiro" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="AssistitoRitiro" Association="PackTrackingDatabaseModel.Store.AssistitoRitiro">
+      <End Role="Assistito" EntitySet="Assistito" />
+      <End Role="Ritiro" EntitySet="Ritiro" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Assistito">
+    <Key>
+      <PropertyRef Name="NumeroTessera" />
+    </Key>
+    <Property Name="NumeroTessera" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" Nullable="true" MaxLength="4000" />
+    <Property Name="Cognome" Type="nvarchar" Nullable="true" />
+    <Property Name="ComuneDiNascita" Type="nvarchar" Nullable="true" />
+    <Property Name="DataDiNascita" Type="datetime" Nullable="true" />
+    <Property Name="Indirizzo" Type="nvarchar" Nullable="true" />
+    <Property Name="CAP" Type="nvarchar" Nullable="true" />
+    <Property Name="ComponentiNucleoFamiliare" Type="smallint" Nullable="true" />
+    <Property Name="TelefonoAbitazione" Type="nvarchar" Nullable="true" />
+    <Property Name="TelefonoCellulare" Type="nvarchar" Nullable="true" />
+    <Property Name="StatoDiProvenienza" Type="nvarchar" Nullable="true" />
+    <Property Name="Note" Type="nvarchar" Nullable="true" />
+    <Property Name="DataConsegnaOlio" Type="datetime" Nullable="true" />
+    <Property Name="DataConsegnaCaffe" Type="datetime" Nullable="true" />
+    <Property Name="DataScadenzaAssistenza" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Ritiro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" Nullable="true" />
+    <Property Name="Assistito_NumeroTessera" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="AssistitoRitiro">
+    <End Role="Assistito" Type="PackTrackingDatabaseModel.Store.Assistito" Multiplicity="1" />
+    <End Role="Ritiro" Type="PackTrackingDatabaseModel.Store.Ritiro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assistito">
+        <PropertyRef Name="NumeroTessera" />
+      </Principal>
+      <Dependent Role="Ritiro">
+        <PropertyRef Name="Assistito_NumeroTessera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

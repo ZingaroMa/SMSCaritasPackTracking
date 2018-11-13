@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PackTrackingDatabaseModelStoreContainer" CdmEntityContainer="PackTrackingDatabaseEntities">
+    <EntitySetMapping Name="Assistito">
+      <EntityTypeMapping TypeName="IsTypeOf(PackTrackingDatabaseModel.Assistito)">
+        <MappingFragment StoreEntitySet="Assistito">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,15 @@
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\bin\Debug\PackTrackingDatabase.sdf
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\bin\Debug\SMS.Caritas.PackTracking.WindowsApplication.exe.config
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\bin\Debug\SMS.Caritas.PackTracking.WindowsApplication.exe
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\bin\Debug\SMS.Caritas.PackTracking.WindowsApplication.pdb
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\bin\Debug\SMS.CaritasPackTracking.Model.dll
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\bin\Debug\SMS.CaritasPackTracking.Model.pdb
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\obj\x86\Debug\SMS.Caritas.PackTracking.WindowsApplication.csprojResolveAssemblyReference.cache
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\obj\x86\Debug\SMS.Caritas.PackTracking.WindowsApplication.Form_DettaglioAssistito.resources
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\obj\x86\Debug\SMS.Caritas.PackTracking.WindowsApplication.Form_InserimentoRitiroPacco.resources
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\obj\x86\Debug\SMS.Caritas.PackTracking.WindowsApplication.Form_Login.resources
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\obj\x86\Debug\SMS.Caritas.PackTracking.WindowsApplication.Form_Main.resources
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\obj\x86\Debug\SMS.Caritas.PackTracking.WindowsApplication.Properties.Resources.resources
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\obj\x86\Debug\SMS.Caritas.PackTracking.WindowsApplication.csproj.GenerateResource.Cache
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\obj\x86\Debug\SMS.Caritas.PackTracking.WindowsApplication.exe
+C:\SMSCaritasPackTracking\Codice\SMSCaritasPackTracking\SMS.Caritas.PackTracking.WindowsApplication\obj\x86\Debug\SMS.Caritas.PackTracking.WindowsApplication.pdb

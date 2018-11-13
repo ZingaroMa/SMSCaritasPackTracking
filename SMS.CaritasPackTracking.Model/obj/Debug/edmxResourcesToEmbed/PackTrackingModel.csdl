@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PackTrackingDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="PackTrackingDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Assistito" EntityType="PackTrackingDatabaseModel.Assistito" />
+    <EntitySet Name="Ritiro" EntityType="PackTrackingDatabaseModel.Ritiro" />
+    <AssociationSet Name="AssistitoRitiro" Association="PackTrackingDatabaseModel.AssistitoRitiro">
+      <End Role="Assistito" EntitySet="Assistito" />
+      <End Role="Ritiro" EntitySet="Ritiro" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Assistito">
+    <Key>
+      <PropertyRef Name="NumeroTessera" />
+    </Key>
+    <Property Name="NumeroTessera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Nome" Type="String" Nullable="true" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="Cognome" Nullable="true" />
+    <Property Type="String" Name="ComuneDiNascita" Nullable="true" />
+    <Property Type="DateTime" Name="DataDiNascita" Nullable="true" />
+    <Property Type="String" Name="Indirizzo" Nullable="true" />
+    <Property Type="String" Name="CAP" Nullable="true" />
+    <Property Type="Int16" Name="ComponentiNucleoFamiliare" Nullable="true" />
+    <Property Type="String" Name="TelefonoAbitazione" Nullable="true" />
+    <Property Type="String" Name="TelefonoCellulare" Nullable="true" />
+    <Property Type="String" Name="StatoDiProvenienza" Nullable="true" />
+    <Property Name="Note" Nullable="true" Type="String" />
+    <NavigationProperty Name="Ritiro" Relationship="PackTrackingDatabaseModel.AssistitoRitiro" FromRole="Assistito" ToRole="Ritiro" />
+    <Property Name="DataConsegnaOlio" Nullable="true" Type="DateTime" />
+    <Property Name="DataConsegnaCaffe" Nullable="true" Type="DateTime" />
+    <Property Name="DataScadenzaAssistenza" Nullable="true" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="Ritiro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Assistito" Relationship="PackTrackingDatabaseModel.AssistitoRitiro" FromRole="Ritiro" ToRole="Assistito" />
+    <Property Type="DateTime" Name="Data" Nullable="false" />
+    <Property Type="String" Name="Note" Nullable="true" />
+  </EntityType>
+  <Association Name="AssistitoRitiro">
+    <End Type="PackTrackingDatabaseModel.Assistito" Role="Assistito" Multiplicity="1" />
+    <End Type="PackTrackingDatabaseModel.Ritiro" Role="Ritiro" Multiplicity="*" />
+  </Association>
+</Schema>

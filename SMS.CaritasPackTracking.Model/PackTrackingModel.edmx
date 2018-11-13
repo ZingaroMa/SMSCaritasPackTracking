@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PackTrackingDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PackTrackingDatabaseModelStoreContainer">
+    <EntitySet Name="Assistito" EntityType="PackTrackingDatabaseModel.Store.Assistito" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ritiro" EntityType="PackTrackingDatabaseModel.Store.Ritiro" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="AssistitoRitiro" Association="PackTrackingDatabaseModel.Store.AssistitoRitiro">
+      <End Role="Assistito" EntitySet="Assistito" />
+      <End Role="Ritiro" EntitySet="Ritiro" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Assistito">
+    <Key>
+      <PropertyRef Name="NumeroTessera" />
+    </Key>
+    <Property Name="NumeroTessera" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" Nullable="true" MaxLength="4000" />
+    <Property Name="Cognome" Type="nvarchar" Nullable="true" />
+    <Property Name="ComuneDiNascita" Type="nvarchar" Nullable="true" />
+    <Property Name="DataDiNascita" Type="datetime" Nullable="true" />
+    <Property Name="Indirizzo" Type="nvarchar" Nullable="true" />
+    <Property Name="CAP" Type="nvarchar" Nullable="true" />
+    <Property Name="ComponentiNucleoFamiliare" Type="smallint" Nullable="true" />
+    <Property Name="TelefonoAbitazione" Type="nvarchar" Nullable="true" />
+    <Property Name="TelefonoCellulare" Type="nvarchar" Nullable="true" />
+    <Property Name="StatoDiProvenienza" Type="nvarchar" Nullable="true" />
+    <Property Name="Note" Type="nvarchar" Nullable="true" />
+    <Property Name="DataConsegnaOlio" Type="datetime" Nullable="true" />
+    <Property Name="DataConsegnaCaffe" Type="datetime" Nullable="true" />
+    <Property Name="DataScadenzaAssistenza" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Ritiro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" Nullable="true" />
+    <Property Name="Assistito_NumeroTessera" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="AssistitoRitiro">
+    <End Role="Assistito" Type="PackTrackingDatabaseModel.Store.Assistito" Multiplicity="1" />
+    <End Role="Ritiro" Type="PackTrackingDatabaseModel.Store.Ritiro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assistito">
+        <PropertyRef Name="NumeroTessera" />
+      </Principal>
+      <Dependent Role="Ritiro">
+        <PropertyRef Name="Assistito_NumeroTessera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PackTrackingDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="PackTrackingDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Assistito" EntityType="PackTrackingDatabaseModel.Assistito" />
+          <EntitySet Name="Ritiro" EntityType="PackTrackingDatabaseModel.Ritiro" />
+          <AssociationSet Name="AssistitoRitiro" Association="PackTrackingDatabaseModel.AssistitoRitiro">
+            <End Role="Assistito" EntitySet="Assistito" />
+            <End Role="Ritiro" EntitySet="Ritiro" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Assistito">
+          <Key>
+            <PropertyRef Name="NumeroTessera" />
+          </Key>
+          <Property Name="NumeroTessera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="Nome" Type="String" Nullable="true" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Cognome" Nullable="true" />
+          <Property Type="String" Name="ComuneDiNascita" Nullable="true" />
+          <Property Type="DateTime" Name="DataDiNascita" Nullable="true" />
+          <Property Type="String" Name="Indirizzo" Nullable="true" />
+          <Property Type="String" Name="CAP" Nullable="true" />
+          <Property Type="Int16" Name="ComponentiNucleoFamiliare" Nullable="true" />
+          <Property Type="String" Name="TelefonoAbitazione" Nullable="true" />
+          <Property Type="String" Name="TelefonoCellulare" Nullable="true" />
+          <Property Type="String" Name="StatoDiProvenienza" Nullable="true" />
+          <Property Name="Note" Nullable="true" Type="String" />
+          <NavigationProperty Name="Ritiro" Relationship="PackTrackingDatabaseModel.AssistitoRitiro" FromRole="Assistito" ToRole="Ritiro" />
+          <Property Name="DataConsegnaOlio" Nullable="true" Type="DateTime" />
+          <Property Name="DataConsegnaCaffe" Nullable="true" Type="DateTime" />
+          <Property Name="DataScadenzaAssistenza" Nullable="true" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Ritiro">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <NavigationProperty Name="Assistito" Relationship="PackTrackingDatabaseModel.AssistitoRitiro" FromRole="Ritiro" ToRole="Assistito" />
+          <Property Type="DateTime" Name="Data" Nullable="false" />
+          <Property Type="String" Name="Note" Nullable="true" />
+        </EntityType>
+        <Association Name="AssistitoRitiro">
+          <End Type="PackTrackingDatabaseModel.Assistito" Role="Assistito" Multiplicity="1" />
+          <End Type="PackTrackingDatabaseModel.Ritiro" Role="Ritiro" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PackTrackingDatabaseModelStoreContainer" CdmEntityContainer="PackTrackingDatabaseEntities1">
+    <EntitySetMapping Name="Assistito">
+      <EntityTypeMapping TypeName="IsTypeOf(PackTrackingDatabaseModel.Assistito)">
+        <MappingFragment StoreEntitySet="Assistito">
+          <ScalarProperty Name="NumeroTessera" ColumnName="NumeroTessera" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Cognome" ColumnName="Cognome" />
+          <ScalarProperty Name="ComuneDiNascita" ColumnName="ComuneDiNascita" />
+          <ScalarProperty Name="DataDiNascita" ColumnName="DataDiNascita" />
+          <ScalarProperty Name="Indirizzo" ColumnName="Indirizzo" />
+          <ScalarProperty Name="CAP" ColumnName="CAP" />
+          <ScalarProperty Name="ComponentiNucleoFamiliare" ColumnName="ComponentiNucleoFamiliare" />
+          <ScalarProperty Name="TelefonoAbitazione" ColumnName="TelefonoAbitazione" />
+          <ScalarProperty Name="TelefonoCellulare" ColumnName="TelefonoCellulare" />
+          <ScalarProperty Name="StatoDiProvenienza" ColumnName="StatoDiProvenienza" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="DataConsegnaOlio" ColumnName="DataConsegnaOlio" />
+          <ScalarProperty Name="DataConsegnaCaffe" ColumnName="DataConsegnaCaffe" />
+          <ScalarProperty Name="DataScadenzaAssistenza" ColumnName="DataScadenzaAssistenza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ritiro">
+      <EntityTypeMapping TypeName="IsTypeOf(PackTrackingDatabaseModel.Ritiro)">
+        <MappingFragment StoreEntitySet="Ritiro">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AssistitoRitiro" TypeName="PackTrackingDatabaseModel.AssistitoRitiro" StoreEntitySet="Ritiro">
+      <EndProperty Name="Assistito">
+        <ScalarProperty Name="NumeroTessera" ColumnName="Assistito_NumeroTessera" />
+      </EndProperty>
+      <EndProperty Name="Ritiro">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="PackTrackingModel">
+        <EntityTypeShape EntityType="PackTrackingDatabaseModel.Assistito" Width="2.25" PointX="0.875" PointY="1" Height="4.0956022135416656" IsExpanded="true" />
+        <EntityTypeShape EntityType="PackTrackingDatabaseModel.Ritiro" Width="1.5" PointX="5" PointY="1.875" Height="1.787985026041667" />
+        <AssociationConnector Association="PackTrackingDatabaseModel.AssistitoRitiro">
+          <ConnectorPoint PointX="3.125" PointY="2.7689925130208337" />
+          <ConnectorPoint PointX="5" PointY="2.7689925130208337" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

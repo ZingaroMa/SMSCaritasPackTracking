@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PackTrackingDatabaseModelStoreContainer" CdmEntityContainer="PackTrackingDatabaseEntities1">
+    <EntitySetMapping Name="Assistito">
+      <EntityTypeMapping TypeName="IsTypeOf(PackTrackingDatabaseModel.Assistito)">
+        <MappingFragment StoreEntitySet="Assistito">
+          <ScalarProperty Name="NumeroTessera" ColumnName="NumeroTessera" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Cognome" ColumnName="Cognome" />
+          <ScalarProperty Name="ComuneDiNascita" ColumnName="ComuneDiNascita" />
+          <ScalarProperty Name="DataDiNascita" ColumnName="DataDiNascita" />
+          <ScalarProperty Name="Indirizzo" ColumnName="Indirizzo" />
+          <ScalarProperty Name="CAP" ColumnName="CAP" />
+          <ScalarProperty Name="ComponentiNucleoFamiliare" ColumnName="ComponentiNucleoFamiliare" />
+          <ScalarProperty Name="TelefonoAbitazione" ColumnName="TelefonoAbitazione" />
+          <ScalarProperty Name="TelefonoCellulare" ColumnName="TelefonoCellulare" />
+          <ScalarProperty Name="StatoDiProvenienza" ColumnName="StatoDiProvenienza" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="DataConsegnaOlio" ColumnName="DataConsegnaOlio" />
+          <ScalarProperty Name="DataConsegnaCaffe" ColumnName="DataConsegnaCaffe" />
+          <ScalarProperty Name="DataScadenzaAssistenza" ColumnName="DataScadenzaAssistenza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ritiro">
+      <EntityTypeMapping TypeName="IsTypeOf(PackTrackingDatabaseModel.Ritiro)">
+        <MappingFragment StoreEntitySet="Ritiro">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AssistitoRitiro" TypeName="PackTrackingDatabaseModel.AssistitoRitiro" StoreEntitySet="Ritiro">
+      <EndProperty Name="Assistito">
+        <ScalarProperty Name="NumeroTessera" ColumnName="Assistito_NumeroTessera" />
+      </EndProperty>
+      <EndProperty Name="Ritiro">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

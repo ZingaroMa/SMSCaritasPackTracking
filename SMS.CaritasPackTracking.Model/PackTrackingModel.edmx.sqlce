@@ -1,0 +1,97 @@
+
+-- --------------------------------------------------
+-- Entity Designer DDL Script for SQL Server Compact Edition
+-- --------------------------------------------------
+-- Date Created: 05/24/2012 00:15:47
+-- Generated from EDMX file: C:\Users\Marco\Documents\Visual Studio 2010\Projects\SMSCaritasPackTracking\SMS.CaritasPackTracking.Model\PackTrackingModel.edmx
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Dropping existing FOREIGN KEY constraints
+-- NOTE: if the constraint does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    ALTER TABLE [Ritiro] DROP CONSTRAINT [FK_AssistitoRitiro];
+GO
+
+-- --------------------------------------------------
+-- Dropping existing tables
+-- NOTE: if the table does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    DROP TABLE [Assistito];
+GO
+    DROP TABLE [Ritiro];
+GO
+
+-- --------------------------------------------------
+-- Creating all tables
+-- --------------------------------------------------
+
+-- Creating table 'Assistito'
+CREATE TABLE [Assistito] (
+    [NumeroTessera] int  NOT NULL,
+    [Nome] nvarchar(4000)  NULL,
+    [Cognome] nvarchar(4000)  NULL,
+    [ComuneDiNascita] nvarchar(4000)  NULL,
+    [DataDiNascita] datetime  NULL,
+    [Indirizzo] nvarchar(4000)  NULL,
+    [CAP] nvarchar(4000)  NULL,
+    [ComponentiNucleoFamiliare] smallint  NULL,
+    [TelefonoAbitazione] nvarchar(4000)  NULL,
+    [TelefonoCellulare] nvarchar(4000)  NULL,
+    [StatoDiProvenienza] nvarchar(4000)  NULL,
+    [Note] nvarchar(4000)  NULL,
+    [DataConsegnaOlio] datetime  NULL,
+    [DataConsegnaCaffe] datetime  NULL,
+    [DataScadenzaAssistenza] datetime  NULL
+);
+GO
+
+-- Creating table 'Ritiro'
+CREATE TABLE [Ritiro] (
+    [Id] int  NOT NULL,
+    [Data] datetime  NOT NULL,
+    [Note] nvarchar(4000)  NULL,
+    [Assistito_NumeroTessera] int  NOT NULL
+);
+GO
+
+-- --------------------------------------------------
+-- Creating all PRIMARY KEY constraints
+-- --------------------------------------------------
+
+-- Creating primary key on [NumeroTessera] in table 'Assistito'
+ALTER TABLE [Assistito]
+ADD CONSTRAINT [PK_Assistito]
+    PRIMARY KEY ([NumeroTessera] );
+GO
+
+-- Creating primary key on [Id] in table 'Ritiro'
+ALTER TABLE [Ritiro]
+ADD CONSTRAINT [PK_Ritiro]
+    PRIMARY KEY ([Id] );
+GO
+
+-- --------------------------------------------------
+-- Creating all FOREIGN KEY constraints
+-- --------------------------------------------------
+
+-- Creating foreign key on [Assistito_NumeroTessera] in table 'Ritiro'
+ALTER TABLE [Ritiro]
+ADD CONSTRAINT [FK_AssistitoRitiro]
+    FOREIGN KEY ([Assistito_NumeroTessera])
+    REFERENCES [Assistito]
+        ([NumeroTessera])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_AssistitoRitiro'
+CREATE INDEX [IX_FK_AssistitoRitiro]
+ON [Ritiro]
+    ([Assistito_NumeroTessera]);
+GO
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------
